@@ -12,7 +12,7 @@ class Title extends React.Component {
         return (
         <div> 
             <div>teste</div> 
-            <h1>{this.props.name + ' e o sobrenome ' +  this.props.lastName}</h1> 
+            <h1>{this.props.name + ' e o sobrenome ' +  this.props.lastName.first + this.props.lastName.last}</h1> 
         </div>);
     }
 
