@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 //@@@funcao pura
 /* const Title = ({name, lastname}}) => {
@@ -16,7 +16,7 @@ Title.defaultProps = {
 } */
 
 //@@@Criando classes
-class Title extends React.Component {
+class Title extends Component {
 
     //passando uma propriedade que for padrao, caso não seja enviada a propriedade para a classe.
     static defaultProps = {

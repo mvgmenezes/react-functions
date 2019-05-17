@@ -1,10 +1,15 @@
 import React from 'react';
-import Title from './title';
+import Square from './square';
 
 class App extends React.Component {
 
   render(){
-      return <Title name="Marcus" />;
+      return (
+        <div>
+          <Square color='blue' ></Square>
+        </div>
+      );
+      
   }
 
 }
