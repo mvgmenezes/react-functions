@@ -1,13 +1,31 @@
 import React from 'react';
 
-class Title extends React.Component {
+//funcao pura
+/* const Title = ({name, lastname}}) => {
+    return (
+        <h1>{`${name} e o sobrenome ${lastName || 'No Sobrenome'}`}</h1>
+    )
+} */
+//funcao pura em uma linha
+const Title = (props) => <h1>{`${props.name} e o sobrenome ${props.lastName}`}</h1>
+
+//Usando defaultprops 
+Title.defaultProps = {
+    name: 'Desconhecido',
+    lastName: 'sobrenome'
+}
+
+/* class Title extends React.Component {
 
     //passando uma propriedade que for padrao, caso não seja enviada a propriedade para a classe.
     static defaultProps = {
         name: 'Desconhecido',
-        lastName: 'Sem sobrenome'
+        lastName: {
+            first: '<Sem',
+            last:' sobrenome>'
+        }
+
     }
-    
     render(){
         return (
         <div> 
@@ -16,6 +34,6 @@ class Title extends React.Component {
         </div>);
     }
 
-}
+} */
 
 export default Title;
