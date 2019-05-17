@@ -27,7 +27,7 @@ class App extends React.Component {
           })}>
           {this.state.text}
         </div>
-
+        
         //passando os dados via props
         /*{ <div className='container' onClick={this.clicouNaDiv}>
           <Title name="Marcus" />
