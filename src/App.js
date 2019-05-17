@@ -1,7 +1,8 @@
 import React from 'react';
 import Square from './square';
 import Title from './title';
-import Button from './button';
+import SearchButton from './search-button';
+import LikeButton from './like-button';
 
 class App extends React.Component {
 
@@ -17,11 +18,8 @@ class App extends React.Component {
         <div className='container' onClick={this.clicouNaDiv}>
           <Title name="Marcus" />
           
-          <Button>Teste</Button>
-
-          <Button>
-            <span>Teste com children </span>
-          </Button>
+          <LikeButton />
+          <SearchButton />
 
 
           {['green', 'yellow', 'blue', 'green'].map( (color, index) => 
