@@ -5,8 +5,10 @@ class App extends React.Component {
 
   render(){
       return (
-        <div>
-          <Square color='blue' ></Square>
+        <div className='container'>
+          {['green', 'yellow', 'blue'].map( (color) => 
+            <Square key={color} color={color} />
+          )}
         </div>
       );
       
