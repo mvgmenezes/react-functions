@@ -5,6 +5,7 @@ import SearchButton from './search-button';
 import LikeButton from './like-button';
 import LifeCycle from './life-cycle';
 import Button from './button';
+import Forms from './forms';
 
 class App extends React.Component {
 
@@ -18,9 +19,11 @@ class App extends React.Component {
 
   render(){
       return (
+        //trabalhando com form
+        <Forms />
 
-        //trabalhando com propTypes
-        <Button > Clique em mim</Button>
+        /* //trabalhando com propTypes
+        <Button > Clique em mim</Button> */
 
 
         //trabalhando com ciclo de vida
