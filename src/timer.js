@@ -17,9 +17,10 @@ class Timer extends Component{
     }
     componentDidMount(){
         //atribuindo o setInterval a uma variavel timer para poder destrui-la após finalizar a execução, para que naofique rodando apra sempre por ser assincrona
-        this.timer = setInterval(() => {
+        /* this.timer = setInterval(() => {
             this.setState({time: this.state.time + 1}
-                )}, 1000)
+                )}, 1000) */
+        
     }
 
     componentWillUnmount(){
@@ -33,6 +34,18 @@ class Timer extends Component{
         //return this.props.time !== nextProps.time
         return true;
     }
+
+    //ultimo momento antes que o componente for renderizado
+    //nao indicado mexer no estado nesse metodo.
+    componentWillUpdate(nextProps, nextState){
+        console.log('shouldComponentUpdate' + this.props, nextProps);
+    }
+    
+
+    componentDidUpdate(prevProps, prevState){
+        console.log('componentDidUpdate', prevProps, prevState)
+    }
+
     render(){
         return <div>Timer: {this.state.time}</div>
     }

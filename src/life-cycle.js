@@ -4,7 +4,7 @@ import Timer from './timer';
 class LifeCycle extends Component {
 
     constructor(){
-        console.log('constructor')
+        console.log('constructor app')
         super()
         this.state = {
             text: 'texto',
@@ -16,13 +16,13 @@ class LifeCycle extends Component {
     //tambem executa no lado do servidor e no front end, por isso nao eh bom exeutar
     //pois o componente ainda nao esta no DOM pois é willMount
     componentWillMount(){
-        console.log('componenteWillMount')
+        console.log('componenteWillMount app')
     }
 
     //executado apos o componente ser montado no DOM, esse metodo é usado quadno preciso realizar
     //manipulacao de DOM como uma biblioteca externa. Executa somente no Frontend
     componentDidMount(){
-        console.log('componenteDidMout')
+        console.log('componenteDidMout app')
     }
 
 
