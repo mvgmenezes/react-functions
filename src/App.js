@@ -4,6 +4,7 @@ import Title from './title';
 import SearchButton from './search-button';
 import LikeButton from './like-button';
 import LifeCycle from './life-cycle';
+import Button from './button';
 
 class App extends React.Component {
 
@@ -18,7 +19,12 @@ class App extends React.Component {
   render(){
       return (
 
-        <LifeCycle />
+        //trabalhando com propTypes
+        <Button > Clique em mim</Button>
+
+
+        //trabalhando com ciclo de vida
+        /* <LifeCycle /> */
 
         //trabalhando com state
         //tudo que muda na aplicação, é chamado de state, e é manipulado 
