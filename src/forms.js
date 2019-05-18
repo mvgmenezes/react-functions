@@ -20,7 +20,17 @@ class Forms extends Component {
     render(){
         return (
             <div>
-                <form>
+                <form onSubmit={(e) => {
+                    //prevent defaul previne que seja enviado os parametros via url get
+                    e.preventDefault()
+                    console.log(e)
+
+                }}
+                onChange={(e) => {
+                    //pega qualquer alteracao no formulario
+                    console.log('name', e.target.name)
+                    console.log('value', e.target.value)
+                }}>
                     <h3>Input Controlled - trabalho com state</h3>
                     <input type="text" value={this.state.value} onChange={this.entrouDadosNoInput}/>
                     <br />
@@ -65,6 +75,8 @@ class Forms extends Component {
                     <h3>TextArea Uncontrolled - NAO trabalho com o state, uso o default do react</h3>
                     <textarea defaultValue={'Texto na \ninformado'}></textarea>
                     
+
+                    <button type='submit'>Entrar</button>
                 </form>
             </div>
         )
