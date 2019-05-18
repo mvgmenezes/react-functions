@@ -60,6 +60,10 @@ class Forms extends Component {
                         <option value='2'>Opção 2</option>
                         <option value='3'>Opção 3</option>
                     </select>
+
+                    <br/>
+                    <h3>TextArea Uncontrolled - NAO trabalho com o state, uso o default do react</h3>
+                    <textarea defaultValue={'Texto na \ninformado'}></textarea>
                     
                 </form>
             </div>
