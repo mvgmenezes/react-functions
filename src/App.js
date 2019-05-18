@@ -3,6 +3,7 @@ import Square from './square';
 import Title from './title';
 import SearchButton from './search-button';
 import LikeButton from './like-button';
+import LifeCycle from './life-cycle';
 
 class App extends React.Component {
 
@@ -17,16 +18,18 @@ class App extends React.Component {
   render(){
       return (
 
+        <LifeCycle />
+
         //trabalhando com state
         //tudo que muda na aplicação, é chamado de state, e é manipulado 
         //pelo Stateful
         //StateFul - Componente que manipula o estado da aplicacao (State), nesse caso o App.js é Stateful
         //Para ser um componente Stateful, precisa ser uma class extendendo o Component do React, em função pura ele nao funciona
-        <div className="container" onClick={ () => this.setState({
+/*         <div className="container" onClick={ () => this.setState({
             text: 'Outro texto'
           })}>
           {this.state.text}
-        </div>
+        </div> */
         
         //passando os dados via props
         /*{ <div className='container' onClick={this.clicouNaDiv}>
