@@ -13,14 +13,37 @@ class App extends React.Component {
     super();
     //quando se trabalha com state, no constructor eh o momento de setar o state da app
     this.state = {
-      text: 'MarcusMenezes'
+      text: 'MarcusMenezes',
+      checked: false,
+      showContent: false
+
     }
   }
 
   render(){
       return (
+
+        //trabalhando como setstate assincrono
+        //como ele é assincrono posso chamar a funcao de callback do set state para executar algum codigo
+        <div>
+          <input 
+          type='checkbox' 
+          checked={this.state.checked} 
+          onChange={() => {
+            this.setState({
+              checked: !this.state.checked
+            },()=> {
+              this.setState({showContent: this.state.checked})
+            })
+          }} />
+
+          {this.state.showContent && <div>Olha eu aqui checkado</div>}
+
+        </div>
+        
+
         //trabalhando com form
-        <Forms />
+        /*<Forms />*/
 
         /* //trabalhando com propTypes
         <Button > Clique em mim</Button> */
