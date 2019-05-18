@@ -25,9 +25,6 @@ class LifeCycle extends Component {
         console.log('componenteDidMout')
     }
 
-    componentWillUnmount(){
-
-    }
 
     render(){
         console.log('render')
@@ -37,7 +34,11 @@ class LifeCycle extends Component {
 
                 <button onClick={() => {
                     this.setState({time: this.state.time + 10})
-                }}>Show / Hide timer </button>
+                }}>Add 10 </button>
+                <br />
+                <button onClick={() => {
+                    this.setState({showTimer: !this.state.showTimer})
+                }}> Show / Hidder </button>
             </div>
         );
     }
