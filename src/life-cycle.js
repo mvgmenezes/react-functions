@@ -8,6 +8,7 @@ class LifeCycle extends Component {
         super()
         this.state = {
             text: 'texto',
+            time: 0,
             showTimer: true
         }
     }
@@ -32,10 +33,10 @@ class LifeCycle extends Component {
         console.log('render')
         return (
             <div>
-                {this.state.showTimer && <Timer /> }
+                {this.state.showTimer && <Timer time={this.state.time}/> }
 
                 <button onClick={() => {
-                    this.setState({showTimer : !this.state.showTimer})
+                    this.setState({time: this.state.time + 10})
                 }}>Show / Hide timer </button>
             </div>
         );

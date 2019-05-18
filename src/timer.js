@@ -11,6 +11,10 @@ class Timer extends Component{
 
     }
 
+    //verifica o props enviado antes de atualizar o props
+    componentWillReceiveProps(nextProps){
+        console.log('componentWillReceiveProps', this.props, nextProps)
+    }
     componentDidMount(){
         //atribuindo o setInterval a uma variavel timer para poder destrui-la após finalizar a execução, para que naofique rodando apra sempre por ser assincrona
         this.timer = setInterval(() => {
